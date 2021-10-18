@@ -1,0 +1,24 @@
+<p>home page</p>
+<script>
+    var url = URL_ROOT + "transactions?fromDate=" + dateFrom + "&pageSize=" + totalRecords
+    fetch(url, {
+        method: "GET",
+        redirect: "follow", // manual, *follow, error
+        mode: "cors", // no-cors, *cors, same-origin
+        cache: "default", // *default, no-cache, reload, force-cache, only-if-cached
+        credentials: "same-origin",
+        headers: {
+            authorization: `${ACCESS_TOKEN}`,
+            "X-Auth-Token": `${ACCESS_TOKEN}`,
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Credentials": true,
+        },
+    })
+        .then(function (respond) {
+            return respond.json()
+        })
+        .then(callback)
+        .catch(function (error) {
+            console.log(error)
+        })
+</script>

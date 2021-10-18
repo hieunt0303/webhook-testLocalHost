@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon --inspect index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +17,12 @@
   "bugs": {
     "url": "https://github.com/hieunt0303/webhook-testLocalHost/issues"
   },
-  "homepage": "https://github.com/hieunt0303/webhook-testLocalHost#readme"
+  "homepage": "https://github.com/hieunt0303/webhook-testLocalHost#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.4",
+    "nodemon": "^2.0.13",
+    "path": "^0.12.7"
+  }
 }
